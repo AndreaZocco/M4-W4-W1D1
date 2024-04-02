@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice - E-commerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="backoffice.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">E-commerce</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Homepage</a>
+            <a class="nav-item nav-link active" href="backoffice.html">Back Office</a>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Gestione Prodotti</h1>
+        <h2>Aggiungi un nuovo prodotto</h2>
+        <form id="product-form">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descrizione</label>
+                <input type="text" class="form-control" id="description" required>
+            </div>
+            <div class="form-group">
+                <label for="brand">Marca</label>
+                <input type="text" class="form-control" id="brand" required>
+            </div>
+            <div class="form-group">
+                <label for="imageUrl">URL Immagine</label>
+                <input type="text" class="form-control" id="imageUrl" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Prezzo</label>
+                <input type="number" class="form-control" id="price" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Aggiungi Prodotto</button>
+        </form>
+
+        <form id="product-edit-form" class="d-none">
+            <div class="form-group">
+                <label for="edit-name">Nome</label>
+                <input type="text" class="form-control" id="edit-name" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-description">Descrizione</label>
+                <input type="text" class="form-control" id="edit-description" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-brand">Marca</label>
+                <input type="text" class="form-control" id="edit-brand" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-imageUrl">URL Immagine</label>
+                <input type="text" class="form-control" id="edit-imageUrl" required>
+            </div>
+            <div class="form-group">
+                <label for="edit-price">Prezzo</label>
+                <input type="number" class="form-control" id="edit-price" required>
+            </div>
+            <input type="hidden" id="edit-id">
+            <button type="submit" class="btn btn-primary">Salva Modifiche</button>
+        </form>
+
+        <h2 class="mt-5">Lista Prodotti</h2>
+        <div id="products-list"></div>
+    </div>
+
+    <script src="backoffice.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
